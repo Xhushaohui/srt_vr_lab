@@ -1,0 +1,22 @@
+<%= form_for ([@vrapp, @vrscene, @sceneasset]) do |f|%>
+	<%= f.label :assetname %><br>
+	<%= f.text_field :assetname %>
+
+	<br>
+	<br>
+
+	<%= f.label :location %><br>
+	<%= f.text_field :location %>
+
+	<br>
+	<br>
+
+	<%= f.label :text %><br>
+	<%= f.text_field :text %>
+
+	<br>
+	<br>
+
+	<%= f.submit %>
+
+<% end %>

@@ -1,0 +1,28 @@
+<%= form_for ([@vrapp, @vrscene]) do |f|%>
+	<%= f.label :scenename %><br>
+	<%= f.text_field :scenename %>
+
+	<br>
+	<br>
+
+	<%= f.label :orderid %><br>
+	<%= f.text_field :orderid %>
+
+	<br>
+	<br>
+
+	<%= f.label :scenetype %><br>
+	<%= f.text_field :scenetype %>
+
+	<br>
+	<br>
+
+	<%= f.label :scene_img %><br>
+	<%= f.file_field :scene_img %>
+
+	<br>
+	<br>
+
+	<%= f.submit %>
+
+<% end %>

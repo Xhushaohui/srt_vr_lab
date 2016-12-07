@@ -1,0 +1,22 @@
+<div id="banner" class="vrapps_banner">
+		<h1>Discover your favorite VR App</h1>
+</div>
+	
+<div id="vrapps" class="cf">
+	<div class="wrapper">
+		<ul>
+			<% @vrapps.each do |vrapp| %>
+					<%= link_to vrapp do %>
+					<li>
+					<%= image_tag vrapp.thumbnail.url(:medium) %>
+						<div class="vrapp_overview">
+							<h2><%= vrapp.name %></h2>
+							<p class="vrapp_tag"><%= vrapp.tag %></p>
+						</div>
+					</li>
+			  <% end %>
+			<% end %>
+		</ul>
+</div>
+		
+	</div>

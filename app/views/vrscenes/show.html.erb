@@ -1,0 +1,58 @@
+	<div id="vrapp_show">
+		<div id="show_banner">
+		<div class="wrapper_skinny">
+			<h1><%= @vrscene.scenename %></h1>
+			<p class="description">Scene Order: <%= @vrscene.orderid %> <span>  | </span> Scene Type: <%= @vrscene.scenetype %></p>
+				<%= link_to "Edit Scene", edit_vrapp_vrscene_path(@vrapp, @vrscene), class: "subscribe_link" %>
+				<%= link_to "Delete Scene", vrapp_vrscene_path(@vrapp, @vrscene), method: :delete, data: {confirm: "Are your sure?"} , class: "subscribe_link"%>
+				<%= link_to "New Asset", new_vrapp_vrscene_sceneasset_path(@vrapp, @vrscene), class: "subscribe_link" %>
+		</div>
+
+		</div>
+		
+			<div id="breadcrumb">
+					<%= link_to vrapps_path do %>
+						All App
+						<span>/</span>
+						<%= link_to @vrapp.name, vrapp_path(@vrapp) %>
+						<span>/</span>
+						<%= link_to @vrscene.scenename, vrapp_vrscene_path(@vrapp, @vrscene) %>
+					<% end %>
+			</div>
+		
+		 <div id="episodes">
+			<div class="wrapper_skinny">
+				<ul class="cf">
+					<% @sceneassets.each do |sceneasset| %>
+							<li class="cf">
+								<div class="episode_thumbnail">
+									<a href="#">
+										<img src="images/podcast1.jpg" alt="">
+									</a>
+								</div>
+								<div class="episode_overview">
+									<h2><%= link_to sceneasset.assetname, vrapp_vrscene_sceneasset_path(@vrapp, @vrscene, sceneasset) %></h2>
+									<p class="description">
+										Location: <%= sceneasset.location %>
+									</p>
+									<p class="description">
+									text: <%= sceneasset.text %>
+									</p>
+		
+								</div>
+							</li>
+					<% end %>
+				</ul>
+			</div>
+		</div>
+		
+	</div>
+	<div class="pagination">
+		<span class="previous_page disabled">Previous</span>
+		<em class="current">1</em>
+		<a href="#">2</a>
+		<a href="#" class="next_page">Next</a>
+
+	</div>
+
+

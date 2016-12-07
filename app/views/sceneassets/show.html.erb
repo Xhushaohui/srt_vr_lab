@@ -1,0 +1,35 @@
+	<div id="vrapp_show">
+
+		
+			<div id="breadcrumb">
+					<%= link_to vrapps_path do %>
+						All App
+						<span>/</span>
+						<%= link_to @vrapp.name, vrapp_path(@vrapp) %>
+						<span>/</span>
+						<%= link_to @vrscene.scenename, vrapp_vrscene_path(@vrapp, @vrscene) %>
+						<span>/</span>
+						<%= link_to @sceneasset.assetname, vrapp_vrscene_sceneasset_path(@vrapp, @vrscene, @sceneasset) %>
+					<% end %>
+			</div>
+		
+		 <div id="episode_content">
+		 	<div class="wrapper_skinny">
+		 			<img src="images/podcast1.jpg" alt="" class="current_episode_thumbnail">
+		 			<h2><%= @sceneasset.assetname %></h2>
+						<p class="description">
+							Location: <%= @sceneasset.location %>
+						</p>
+						<p class="description">
+							text: <%= @sceneasset.text %>
+						</p>
+						<p class="description">
+							<%= link_to "Edit", edit_vrapp_vrscene_sceneasset_path(@vrapp, @vrscene, @sceneasset) %>
+							<%= link_to "Delete", vrapp_vrscene_sceneasset_path(@vrapp, @vrscene, @sceneasset), method: :delete, data: {confirm: "Are your sure?"} %>
+						</p>
+		 	</div>
+		 </div>
+		
+	</div>
+
+

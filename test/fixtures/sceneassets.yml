@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  assetname: MyString
+  location: 
+  text: MyString
+  vrscene_id: 
+
+two:
+  assetname: MyString
+  location: 
+  text: MyString
+  vrscene_id: 

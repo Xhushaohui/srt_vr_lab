@@ -1,0 +1,52 @@
+	<div id="vrapp_show">
+		<div id="show_banner">
+			<div class="wrapper_skinny">
+				<h1><%= @vrapp.name %></h1>
+				<p class="description"><%= @vrapp.description %></p>
+				<%= link_to "Edit APP", edit_vrapp_path(@vrapp), class: "subscribe_link" %>
+				<%= link_to "Delete Scene", vrapp_path(@vrapp), method: :delete, data: {confirm: "Are your sure?"} , class: "subscribe_link"%>
+				<%= link_to "New Scene", new_vrapp_vrscene_path(@vrapp), class: "subscribe_link" %>
+			</div>
+		</div>
+		
+		<div id="breadcrumb">
+				<%= link_to vrapps_path do %>
+					All App
+					<span>/</span>
+					<%= @vrapp.name %>
+				<% end %>
+		</div>
+		
+		<div id="episodes">
+			<div class="wrapper_skinny">
+				<ul class="cf">
+					<% @vrscenes.each do |vrscene| %>
+							<li class="cf">
+								<div class="episode_thumbnail">
+									<a href="#">
+										<%= image_tag vrscene.scene_img.url(:medium) %>
+									</a>
+								</div>
+								<div class="episode_overview">
+									<h2><%= link_to vrscene.scenename, vrapp_vrscene_path(@vrapp, vrscene) %></h2>
+									<p class="description">
+										Scene Order: <%= vrscene.orderid %> <span>  | </span> Scene Type: <%= vrscene.scenetype %>
+									</p>
+
+								</div>
+							</li>
+					<% end %>
+				</ul>
+			</div>
+		</div>
+
+</div>
+	<div class="pagination">
+		<span class="previous_page disabled">Previous</span>
+		<em class="current">1</em>
+		<a href="#">2</a>
+		<a href="#" class="next_page">Next</a>
+
+</div>
+
+

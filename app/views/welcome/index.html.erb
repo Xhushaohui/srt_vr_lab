@@ -1,0 +1,144 @@
+
+
+<div id="jumbotron">
+<header id = "main_header" class="cf">
+	<div class="wrapper">
+		<%= image_tag "vrlogo_white.png", id: "logo" %>
+		<nav>
+			<ul>		
+				<li><%= link_to "学科系列", vrapps_path %></li>
+				<li><%= link_to "全景课堂", new_vrapp_path %></li>
+				<li><%= link_to "联盟介绍", destroy_user_session_path, method: :delete %></li>
+				<li><%= link_to "联系我们", new_vrapp_path %></li>
+			</ul>
+		</nav>
+	</div>
+
+</header>
+ <div>
+  	<%= video_tag "main-show-video.mp4",type: "video/mp4", :controls => false, :autobuffer => true, :autoplay => true, :loop => true, :id => "home-video" %>
+  </div>
+</div>
+<!-- 内容 -->
+<div class="content cf">
+	<div class="wrapper">
+	<div class="logo_content">
+		<%= image_tag "vrlogo_black.png", class: "logo_black" %>
+	</div>
+		
+	<h4>最新内容</h4>
+
+	<ul>
+			<%= link_to heart_path do %>
+				<li>
+				<%= image_tag "content_1.jpg" %>
+
+					<div class="content_overview">
+						<h2>心脏结构-四中生物课</h2>
+						<p class="content_tag">初中/生物</p>
+					</div>
+				</li>
+			<% end %>
+
+			<%= link_to split_path do %>
+				<li>
+					<%= image_tag "content_2.jpg" %>
+					<div class="content_overview">
+						<h2>有丝分裂-人大附中生物课</h2>
+						<p class="content_tag">高中/生物</p>
+					</div>
+				</li>
+			</a>
+			<% end %>
+
+			<%= link_to organicMolecule_path do %>
+				<li>
+					<%= image_tag "content_3.jpg" %>
+					<div class="content_overview">
+						<h2>有机分子结构化学鉴定</h2>
+						<p class="content_tag">初中/化学</p>
+					</div>
+				</li>
+			</a>
+			<% end %>
+			<%= link_to halloween_path do %>
+				<li>
+					<%= image_tag "content_4.jpg" %>
+					<div class="content_overview">
+						<h2>芳草地国际学校万圣节</h2>
+						<p class="content_tag">小学/校园活动</p>
+					</div>
+				</li>
+			</a>
+			<% end %>
+			<%= link_to neimenggu_path do %>
+				<li>
+					<%= image_tag "content_5.jpg" %>
+					<div class="content_overview">
+						<h2>内蒙古草原全景</h2>
+						<p class="content_tag">初中/地理</p>
+					</div>
+				</li>
+			<%end %>
+			
+			<a href="#">
+				<li>
+					<%= image_tag "content_6.jpg" %>
+					<div class="content_overview">
+						<h2>火山喷发</h2>
+						<p class="content_tag">初中/地理</p>
+					</div>
+				</li>
+			</a>
+	</ul>
+		</div>
+</div>
+<!-- 联盟介绍 -->
+<div class="supporting">
+<div class="wrapper">
+	<h4>中国VR教学联盟</h4>
+	<p>中国VR教学联盟由教育部基础教育课程教材发展中心指导下的中国教研网<br>
+(北京尚睿通教育科技股份有限公司)和一批国内顶尖的中小学、教研机构共同发起。<br><br>
+致力于探索和解决VR技术真正应用于中小学课堂教学的具体问题，
+促进学生学科核心概念理解、核心方法建立以及学科核心素养的提升。<br>
+同时，对于广大中小学教师的教育技术观念和应用能力起到有效地促进。</p>
+<%= link_to "了解更多 ->", new_vrapp_path %>
+</div>
+
+</div>
+<!-- footer -->
+<div class="footer cf">
+<div class="wrapper_skinny">
+	<ul class="cf">
+		
+		<a href="http://www.teacherclub.com.cn/" target="_Blank">
+		<li>
+			<h5>中国教师研修网</h5>
+			<p>中国教师研修网由全国教师教育学会主办
+是一家为全国中小幼教师和教育管理者的专业发展提供
+全方位学习服务的专业机构</p>
+			</li>
+		</a>
+
+		<a href="http://www.zgjiaoyan.com/" target="_Blank">
+		<li>
+			<h5>中国教研网</h5>
+			<p>中国教研网是由教育部基础教育课程教材发展中心指导
+各级教研部门支持，中国教师研修网具体负责运营的首个
+服务全国教研工作和广大中小学教师专业发展的专业网络平台</p>
+		</li>
+		</a>
+
+		<a href="http://www.shangruitong.com/" target="_Blank">
+		<li>
+			<h5>尚睿通教育</h5>
+			<p>尚睿通教育科技股份有限公司（简称“尚睿通教育”）
+成立于2005年，2016年成功挂牌新三板 （股票代码：835971）
+是一家面向中国基础教育领域提供网络服务的高新技术企业</p>
+		</li>
+		</a>
+	</ul>
+	<p>尚睿通公司版权所有 京ICP证060239号 电信与信息服务业务许可证 客户服务热线：（010）82235796-846 举报邮箱：sc@yanxiu.com</p>
+
+</div>
+</div>
