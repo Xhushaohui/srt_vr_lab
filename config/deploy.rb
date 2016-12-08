@@ -2,7 +2,7 @@
 lock '3.6.1'
 
 set :application, 'srt_vr_lab'
-set :repo_url, 'git@github.com:Xhushaohui/srt_vr_lab.git'
+set :repo_url, 'https://github.com/Xhushaohui/srt_vr_lab.git'
 set :deploy_to, '/opt/www/srt_vr_lab'
 set :user, 'deploy'
 set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets}
